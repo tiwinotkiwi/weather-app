@@ -83,7 +83,7 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-searchCity("New York");
+searchCity("Berlin");
 
 const cardsContainer = document.querySelector(".card-carousel");
 const cardsController = document.querySelector(
