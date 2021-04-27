@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App Week 5</title>
+    <title>Vanilla Weather App</title>
     <script
       src="https://kit.fontawesome.com/fa35f3db70.js"
       crossorigin="anonymous"
@@ -24,58 +24,59 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <form class="search-form">
-          <div class="row">
-            <div class="col-4">
-              <input
-                type="search"
-                placeholder="Search city.."
-                autofocus="on"
-                autocomplete="off"
-                id="city-input"
-                class="form-control shadow-sm"
-              />
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <form id="search-form" class="mb-3">
+            <div class="row">
+              <div class="col-9">
+                <input
+                  type="search"
+                  placeholder="Search city.."
+                  class="form-control"
+                  id="city-input"
+                  autocomplete="off"
+                />
+              </div>
+              <div class="col-3">
+                <input
+                  type="submit"
+                  value="Search"
+                  class="btn btn-primary w-100"
+                />
+              </div>
             </div>
-            <div class="col-3">
-              <input
-                type="submit"
-                value="Search"
-                class="form-control btn btn-primary shadow-sm w-100"
-              />
-            </div>
+          </form>
+
+          <div class="overview">
+            <h1 id="city"></h1>
+            <ul>
+              <li><span id="date"></span></li>
+              <li id="description"></li>
+            </ul>
           </div>
-                    
-    <div class="overview">
-    <h1 id="city"></h1>
-    <h2 id="date"></h2>
-    </div>
 
-    <div class="row justify-content-center">
-    <div class="col-2">
-      <span class="temperature" id="temperature"></span>
-      <span class="units">
-          <a href="#" id="celsius-link">°C</a> |
-          <a href="#" id="fahrenheit-link">°F</a>
-          </span>
-    </div>
-    <div class="col-2 condition">
-      <i class="fas fa-cloud-moon cloudy-moon"></i>
-      <br/><div id="description"></div>
-    </div>
-</div>
+          <div class="row">
+            <div class="col-6">
+              <div class="clearfix weather-temperature">
+                <img src="" alt="Clear" id="icon" class="float-left" />
+                <div class="float-left">
+                  <strong id="temperature"></strong
+                  ><span class="units"> °C</span>
+                </div>
+              </div>
+            </div>
 
-    <div class="col-6">
-      <div class="container">
-  <div class="row align-items-start">
-    <div class="col humidity">
-      Humidity : <span id="humidity"></span>%
-    </div>
-    <div class="col wind">
-      Wind : <span id="wind"></span> km/h
-    </div>
-  </div>
-    </div>
+             <div class="row justify-content-center">
+                <div class="col-4">
+                  Humidity: <span id="humidity"></span>%
+                 </div>
+                 <div class="col-4">
+                   Wind: <span id="wind"></span>km/h
+                  </div>
+                  </div>
+            
+          <div class="weather-forecast" id="forecast"></div>
+        </div>
 
 <div class="container-weather">
   <div class="card-carousel">
