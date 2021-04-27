@@ -9,6 +9,8 @@ h1 {
   font-weight: 100;
   line-height: 80px;
   font-family: "Bebas Neue", cursive;
+  display: block;
+  margin: 0 auto;
 }
 
 ul {
@@ -32,6 +34,18 @@ li:first-letter {
   text-transform: capitalize;
 }
 
+.btn-primary {
+  color: #fff;
+  background-color: #8088e0;
+  border-color: #8088e0;
+}
+
+.btn-primary:hover {
+  color: #8088e0;
+  background-color: #ffffff;
+  border-color: #8088e0;
+}
+
 .weather-app-wrapper {
   max-width: 600px;
   margin: 30px auto;
@@ -39,7 +53,7 @@ li:first-letter {
 
 .weather-app {
   padding: 20px;
-  border: 1px solid #dadde1;
+  border: 1px solid #8088e0;
   border-radius: 5px;
 }
 
