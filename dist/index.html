@@ -47,69 +47,56 @@
             </div>
           </form>
 
-          <div class="overview">
+           <div class="overview">
             <h1 id="city"></h1>
-            <h2 id="date">Last Updated:</h2>
-            </ul>
+            <h2>Last updated: <span id="date"></span></h2>
           </div>
-
-          <div class="row justify-content-center">
-                <div class="col-4">
-                  <li id="description"></li>
-                  <div class="float-left" id="description">
-              </div>
+         
+        <div class="container-forecast">
+              <div class="main-forecast">
               <div class="clearfix weather-temperature">
-                <img src="" alt="Clear" id="icon" class="float-left" />
-                <div class="float-left">
-                  <strong id="temperature"></strong
-                  ><span class="units">°C | <a href="#">°F</a></span>
-                </div>
+                <img src="" alt="Clear" id="icon" class="main-forecast" />
+                 <ul>
+                <li id="description"></li>
+              </ul>
+              <hr>
+              </div>
+              <div class="main-temperature">
+               <strong id="temperature"></strong>
+               <span class="units"> °C</span>
+              </ul>
+              <hr>
               </div>
             </div>
+          </div>
+            
 
-
-             <div class="row justify-content-center">
+            <div class="row justify-content-center">
+               <div class="col-4">
+                Humidity💧: <span id="humidity"></span>%
+                </div>
                 <div class="col-4">
-                  Humidity: <span id="humidity"></span>%
-                 </div>
-                 <div class="col-4">
-                   Wind: <span id="wind"></span>km/h
-                  </div>
-                  </div>
+                Wind 💨 : <span id="wind"></span> m/h
+                </div>
+              </div>
+
+
             
           <div class="weather-forecast" id="forecast"></div>
         </div>
 
-<div class="container-weather">
-  <div class="card-carousel">
-    <div class="card" id="1">
-      <div class="image-container"></div>
-      <p class="text-day"><strong>MONDAY</strong></p>
-      <p class="text-temperature"><strong>26°C</strong></p>
-    </div>
-    <div class="card" id="2">
-      <div class="image-container"></div>
-      <p class="text-day"><strong>TUESDAY</strong></p>
-      <p class="text-temperature"><strong>18°C</strong></p>
-    </div>
-    <div class="card" id="3">
-      <div class="image-container"></div>
-      <p class="text-day"><strong>WEDNESDAY</strong></p>
-      <p class="text-temperature"><strong>19°C</strong></p>
-    </div>  
-    <div class="card" id="4">
-      <div class="image-container"></div>
-      <p class="text-day"><strong>THURSDAY</strong></p>
-      <p class="text-temperature"><strong>13°C</strong></p>
-    </div>
-    <div class="card" id="5">
-      <div class="image-container"></div>
-      <p class="text-day"><strong>FRIDAY</strong></p>
-      <p class="text-temperature"><strong>-2°C</strong></p>
-    </div>
-  </div>
-  <a href="#" class="visuallyhidden card-controller">Carousel controller</a>
-</div>
+        <div class="footer">
+          <small>
+            Coded by <a
+            href="https://www.linkedin.com/in/pratiwi-istiningdyah/"
+            target="_blank"
+            >Pratiwi Istiningdyah</a
+          >
+        </small>
+        </div>
+
+
+
 
 
 <script src="src/index.js"></script>

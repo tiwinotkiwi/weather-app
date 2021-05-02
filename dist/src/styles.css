@@ -13,9 +13,9 @@ h1 {
 }
 
 h2 {
-  color: rgb(70, 70, 70);
-  font-size: 20px;
-  font-weight: bold;
+  color: rgb(88, 88, 88);
+  font-size: 16px;
+  font-weight: 100;
   line-height: 10px;
   text-align: center;
 }
@@ -29,16 +29,23 @@ li {
   list-style: none;
   margin: 0;
   padding: 0;
-  color: rgb(70, 70, 70);
+  color: #565b94;
   font-size: 16px;
   font-weight: bold;
-  line-height: 25px;
   display: block;
   margin: 0 auto;
+  margin-top: 48px;
+  margin-bottom: 10px;
 }
 
 li:first-letter {
   text-transform: capitalize;
+}
+
+hr {
+  color: #565b94;
+  width: 50%;
+  margin: auto;
 }
 
 .btn-primary {
@@ -71,36 +78,68 @@ li:first-letter {
 
 .weather-temperature img {
   margin-right: 5px;
-  height: 64px;
-  width: 64px;
+  height: 140px;
+  width: 140px;
+  margin-bottom: -38px;
+  border-color: #ffffff;
+  border-radius: 82px;
+  border-width: 1px;
+  border-style: solid;
+  box-shadow: 5px 3px 10px rgb(0 0 0 / 25%);
 }
 
-.weather-temperature strong {
+.content-center {
+  text-align: center;
+}
+
+.main-temperature {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.main-temperature strong {
   color: #565b94;
   font-family: "Bebas Neue", cursive;
-  font-size: 60px;
+  font-size: 85px;
   line-height: 1;
   font-weight: 400;
 }
 
-.weather-temperature .units {
+.main-temperature .units {
   position: relative;
-  font-size: 16px;
-  top: -34px;
+  font-size: 18px;
+  top: -46px;
 }
 
+.main-forecast {
+  text-align: center;
+}
 .weather-temperature .active {
   color: rgb(33, 33, 33);
   cursor: default;
+}
+
+.col-4 {
+  text-align: center;
+  padding-top: 20px;
+  color: #565b94;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .weather-temperature .active:hover {
   text-decoration: none;
 }
 .weather-forecast {
-  margin-top: 20px;
+  margin-top: 18px;
   text-align: center;
   color: #000;
+  background-color: #94cfff;
+  border: #59fff1;
+  border-radius: 10px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 5px 3px 10px rgb(0 0 0 / 25%);
 }
 
 .weather-forecast-date {
@@ -116,99 +155,6 @@ li:first-letter {
   font-size: 13px;
 }
 
-.card-carousel {
-  --card-width: 80%;
-  --card-max-width: 280px;
-  --card-height: 350px;
-  --carousel-min-width: 600px;
-  z-index: 1;
-  position: relative;
-  margin: 0 auto;
-  display: block;
-  width: 100%;
-  height: var(--card-height);
-  min-width: var(--carousel-min-width);
-  transition: filter 0.3s ease;
-}
-
-@media screen and (max-width: 640px) {
-  .card-carousel {
-    margin-left: calc((100vw - var(--carousel-min-width) - 40px) / 2);
-  }
-}
-
-.card-carousel.smooth-return {
-  transition: all 0.2s ease;
-}
-
-.card-carousel .card {
-  background: whitesmoke;
-  width: var(--card-width);
-  max-width: var(--card-max-width);
+.footer {
   text-align: center;
-  padding: 1em;
-  min-width: 250px;
-  height: var(--card-height);
-  position: absolute;
-  margin: 0 auto;
-  color: #565b94;
-  font-size: 18px;
-  font-family: "Bebas Neue", cursive;
-  transition: inherit;
-  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.3);
-  border-radius: 1em;
-  filter: brightness(0.9);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.card.highlight {
-  filter: brightness(1);
-}
-
-.card:nth-of-type(1) .image-container {
-  background-image: url("imgs/sunny.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.card:nth-of-type(2) .image-container {
-  background-image: url("imgs/Raining.svg");
-}
-
-.card:nth-of-type(3) .image-container {
-  background-image: url("imgs/rain.svg");
-}
-.card:nth-of-type(4) .image-container {
-  background-image: url("imgs/dawn.svg");
-}
-.card:nth-of-type(5) .image-container {
-  background-image: url("imgs/winter.svg");
-}
-
-.image-container {
-  width: 11em;
-  height: 11em;
-  position: relative;
-  background-size: cover;
-  margin-bottom: 2em;
-  border-radius: 100%;
-  padding: 1em;
-  -webkit-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-  -moz-box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-  box-shadow: inset 0px 0px 17px 0px rgba(0, 0, 0, 0.3);
-}
-
-.image-container::after {
-  content: "";
-  display: block;
-  width: 120%;
-  height: 120%;
-  position: absolute;
-  top: calc(-10% - 3px);
-  left: calc(-10% - 3px);
 }
